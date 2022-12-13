@@ -4,10 +4,8 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: "#171717",
-                secondary: "#272727",
-                "dark-subtle": "rgba(255,255,255,0.5)",
-                "light-subtle": "rgba(39,39,39,0.5)",
+                "button_color": "#6558F5",
+                "button_text": "#FFFFFF"
             },
         },
     },

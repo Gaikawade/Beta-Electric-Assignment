@@ -1,25 +1,23 @@
 import React from "react";
-
+import { useNavigate } from "react-router";
 export default function Home() {
+  const navigate = useNavigate();
+
+  function AddFav(){
+    navigate('/fav');
+  }
+
     return (
-        <div className="">
-            <p className="font-bold">Search for NPM Packages</p>
-            <input
-                className="border-2 border-stale-700 w-96 "
-                type="text"
-                name="name"
-            />
-            <p className="font-bold">Result</p>
-            <p className="font-bold">Why is this your fav?</p>
-            <input
-                className="border-2 border-stale-700 h-36 w-96"
-                type="text"
-                name="name"
-            />
+        <div className="flex h-screen flex-col items-center justify-center">
+            <p className="font-bold">Welcome to Favorite NPM Packages</p>
             <br />
-            <button class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded ">
-                Submit
-            </button>
+            <div className="border-2 flex flex-col items-center justify-center w-4/5">
+                <p>You don't have any favs yet. Please add.</p>
+                <br />
+                <button className="font-bold bg-button_color rounded p-2 text to-button_text" onClick={AddFav}>
+                    Add Fav
+                </button>
+            </div>
         </div>
     );
 }
