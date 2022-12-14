@@ -20,18 +20,18 @@ export default function Fav() {
     };
 
     return (
-        <div className="flex h-screen flex-col items-center justify-center">
+        <div className="mx-16 my-12 text-text_color">
             <p className="font-bold">Search for NPM Packages</p>
             <input
-                className="border-2 border-stale-700 w-96 "
+                className="border-2 border-stale-700 w-full"
                 onChange={(e) => {
                     setPackageName(e.target.value);
                 }}
                 onClick={fetchPackages}
                 value={packageName}
             />
-            <p className="font-bold">Result</p>
-            <div className="overflow-auto h-28 w-96">
+            <p className="font-bold my-9">Result</p>
+            <div className="overflow-auto h-28">
                 {/* {
                     result.map((curEle) => 
                         <div>
@@ -42,12 +42,10 @@ export default function Fav() {
             </div>
             <p className="font-bold">Why is this your fav?</p>
             <input
-                className="border-2 border-stale-700 h-36 w-96"
-                type="text"
-                name="name"
+                className="border-2 border-stale-700 h-36 w-full"
             />
             <br />
-            <button class="bg-button_color hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded ">
+            <button class="bg-button_color text-white font-bold py-2 px-4 -mx-0 my-4 rounded -right-0">
                 Submit
             </button>
         </div>
