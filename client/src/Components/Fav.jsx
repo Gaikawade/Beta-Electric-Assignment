@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useState } from "react";
-import {BiCircle} from "react-icons/bi"
 
 export default function Fav() {
     const [packageName, setPackageName] = useState("");
@@ -45,10 +44,13 @@ export default function Fav() {
                 value={packageName}
             />
             <p className="font-bold">Result</p>
-            <div className="flex flex-col overflow-auto h-28 list-none mt-3">
+            <div className=" overflow-auto h-28 mt-3 list-none">
                 {list.map((ele) => (
-                    <li className="flex ">
-                        <BiCircle className="flex flex-col"/>{ele}
+                    <li>
+                        <lable>
+                            <input type="checkbox" className="rounded-full" />
+                            <span>{ele}</span>
+                        </lable>
                     </li>
                 ))}
             </div>
