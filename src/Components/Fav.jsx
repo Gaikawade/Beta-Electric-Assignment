@@ -5,6 +5,7 @@ export default function Fav() {
     const [packageName, setPackageName] = useState("");
     const [result, setResult] = useState("");
     const [list, setList] = useState([]);
+    const [selectedPackage, setSelectedPackage] = useState("");
     const name = [];
 
     const handleChange = (evt) => {
@@ -35,6 +36,12 @@ export default function Fav() {
         setList(name);
     };
 
+    const handleCheckboxClick = (e) => {
+        console.log(e)
+        const { value, checked } = e.target;
+        console.log(value, checked);
+    };
+
     return (
         <div className="mx-16 my-12 text-text_color">
             <p className="font-bold">Search for NPM Packages</p>
@@ -47,15 +54,15 @@ export default function Fav() {
             <div className=" overflow-auto h-28 mt-3 list-none">
                 {list.map((ele) => (
                     <li>
+                        <input type="checkbox" className="rounded-full" onChange={handleCheckboxClick} />
                         <lable>
-                            <input type="checkbox" className="rounded-full" />
                             <span>{ele}</span>
                         </lable>
                     </li>
                 ))}
             </div>
             <p className="font-bold mt-8">Why is this your fav?</p>
-            <input className="border-2 border-box_color h-36 w-full" />
+            <input className="border-2 border-box_color h-36 w-full " />
             <br />
             <button class="bg-button_color text-white font-bold py-2 px-4 -mx-0 my-4 rounded -right-0">
                 Submit
