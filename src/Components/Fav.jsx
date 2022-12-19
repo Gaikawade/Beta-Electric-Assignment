@@ -5,7 +5,7 @@ export default function Fav() {
     const [packageName, setPackageName] = useState("");
     const [result, setResult] = useState("");
     const [list, setList] = useState([]);
-    const [selectedPackage, setSelectedPackage] = useState("");
+    // const [selectedPackage, setSelectedPackage] = useState("");
     const name = [];
 
     const handleChange = (evt) => {
